@@ -31,22 +31,27 @@ export const aboutData = [
       {
         stage: "Web Development",
         icons: [
-          <FaReact />,
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaWordpress />,
-          <SiFramer />,
-          <SiNextdotjs />,
+          <FaReact key="react" />,
+          <FaHtml5 key="html5" />,
+          <FaCss3 key="css3" />,
+          <FaJs key="js" />,
+          <FaWordpress key="wordpress" />,
+          <SiFramer key="framer" />,
+          <SiNextdotjs key="nextjs" />,
         ],
       },
       {
         stage: "UI UX Design",
-        icons: [<FaFigma />, <SiAdobephotoshop />, <SiAdobexd />, <SiCanva />],
+        icons: [
+          <FaFigma key="figma" />,
+          <SiAdobephotoshop key="photoshop" />,
+          <SiAdobexd key="adobexd" />,
+          <SiCanva key="canva" />,
+        ],
       },
       {
         stage: "Video Editing",
-        icons: [<SiAdobepremierepro />],
+        icons: [<SiAdobepremierepro key="premierepro" />],
       },
     ],
   },
@@ -67,13 +72,9 @@ export const aboutData = [
   {
     title: "Certificate",
     info: [
-      // {
-      //   title: "Wordpress",
-      //   stage: "Portfolio",
-      // },
       {
         stage: "Click here to Download",
-        icons: [<FaDownload />],
+        icons: [<FaDownload key="download" />],
       },
     ],
   },
@@ -129,8 +130,8 @@ const About = () => {
       >
         <Avatar2 />
       </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-center  xl:flex-row gap-x-6">
-        <div className="flex-1 flex flex-col  justify-center">
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+        <div className="flex-1 flex flex-col justify-center">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
@@ -158,13 +159,10 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden md:flex  md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
           >
             <div className="flex flex-1 xl:gap-x-6">
-              <div
-                className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10
-              after:absolute after:top-0 after:right-0"
-              >
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <AnimatedNumbers value={5} />+
                 </div>
@@ -172,10 +170,7 @@ const About = () => {
                   Years of Experience
                 </div>
               </div>
-              <div
-                className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10
-              after:absolute after:top-0 after:right-0"
-              >
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <AnimatedNumbers value={7} />+
                 </div>
@@ -183,10 +178,7 @@ const About = () => {
                   Finished Projects
                 </div>
               </div>
-              <div
-                className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10
-              after:absolute after:top-0 after:right-0"
-              >
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <AnimatedNumbers value={10} />+
                 </div>
@@ -204,7 +196,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full  xl:max-w-[48%] h-[480px]"
+          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4 font-normal">
             {aboutData.map((item, itemIndex) => {
@@ -213,10 +205,9 @@ const About = () => {
                   key={itemIndex}
                   className={`${
                     index === itemIndex &&
-                    " text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
+                    "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
                   }
-            cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0
-            `}
+                  cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
@@ -224,25 +215,25 @@ const About = () => {
               );
             })}
           </div>
-          <div className="py-2 xl:py-6 flex  xl:text-lg flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className="py-2 xl:py-6 flex xl:text-lg flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
-                  className="flex-1 xl:text-lg flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                   key={itemIndex}
+                  className="flex-1 xl:text-lg flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
                   <div className="font-light xl:text-lg">{item.title}</div>
                   <div className="hidden md:flex">-</div>
                   <div className="xl:text-lg text-white font-normal mt-4 md:mt-0 ">
                     {item.stage}
                   </div>
-                  <div className="flex gap-x-4 mt-2 md:mt-0  ">
+                  <div className="flex gap-x-4 mt-2 md:mt-0">
                     {item.icons &&
-                      item.icons.map((icon, itemIndex) => {
+                      item.icons.map((icon, iconIndex) => {
                         return (
                           <div
+                            key={iconIndex}
                             className={`text-2xl ml-2 text-white hover:text-red-700 cursor-pointer`}
-                            key={itemIndex}
                           >
                             {icon}
                           </div>
