@@ -8,6 +8,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { FaDownload } from "react-icons/fa";
 import Circles from "../components/Circles";
+import { ReactTyped } from "react-typed";
 
 const Home = () => {
   return (
@@ -15,8 +16,8 @@ const Home = () => {
       <Head>
         <title>Sujal Manandhar</title>
       </Head>
-      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full h-full mt-4 bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto px-4 sm:px-6 md:px-8">
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
@@ -24,9 +25,26 @@ const Home = () => {
             exit="hidden"
             className="h1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-semibold mb-4"
           >
-            Transforming Ideas <br /> Into {""}
-            <span className="text-accent">Digital Reality</span>
+            Hi, It's {""}
+            <span className="text-accent">Sujal Manandhar</span>
+            <div className="text-[30px] md:text-[35px] mt-4  text-white font-bold justify-start">
+              I'm a
+              <ReactTyped
+                className="pl-2 text-accent"
+                strings={[
+                  "Web Designer",
+                  "Software Developer",
+                  "Graphic Designer",
+                  "UI UX Designer",
+                  "Photographer",
+                ]}
+                typeSpeed={40}
+                loop={true}
+                backSpeed={50}
+              />
+            </div>
           </motion.h1>
+
           <motion.p
             variants={fadeIn("down", 0.3)}
             initial="hidden"
@@ -41,7 +59,6 @@ const Home = () => {
             willing to lend my abilities to a creative IT firm that appreciates
             innovation and excellence.
           </motion.p>
-
           {/* Buttons Section */}
           <div className="flex flex-row justify-center xl:justify-start space-x-4 mb-10 xl:mb-16 z-10">
             <Link

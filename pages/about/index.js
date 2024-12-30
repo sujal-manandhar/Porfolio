@@ -72,9 +72,9 @@ export const aboutData = [
     title: "Certificate",
     info: [
       {
-        stage: "Click here to Download",
-        icons: [<FaDownload key="download" />],
-        link: "https://drive.google.com/drive/folders/1y39T-j12uV6AzqPmWfCm5xYDNas27FaZ",
+        stage: "Click here to Download", // Text for download link
+        // icons: [<FaDownload key="download" />], // Download icon
+        link: "https://drive.google.com/drive/folders/1y39T-j12uV6AzqPmWfCm5xYDNas27FaZ", // Google Drive link
       },
     ],
   },
@@ -129,7 +129,7 @@ const About = () => {
         <Avatar2 />
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div className="text-center flex flex-col justify-center  xl:text-left  mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center flex flex-col justify-center xl:text-left mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
@@ -194,9 +194,9 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full  xl:max-w-[48%] h-[480px]  px-4"
+          className="flex flex-col w-full xl:max-w-[48%] h-[480px] px-4"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto  xl:mx-0 mb-4 font-normal">
+          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4 font-normal">
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -237,6 +237,17 @@ const About = () => {
                           </div>
                         );
                       })}
+                    {/* Ensure the download section is only rendered once */}
+                    {item.link && (
+                      <a
+                        href={item.link}
+                        target="https://drive.google.com/drive/folders/1y39T-j12uV6AzqPmWfCm5xYDNas27FaZ" // Ensure the link opens in a new tab
+                        rel="noopener noreferrer"
+                        className="text-white text-lg flex items-center gap-2 mt-4 md:mt-0 hover:text-accent"
+                      >
+                        <FaDownload className=" cursor-pointer text-2xl" />
+                      </a>
+                    )}
                   </div>
                 </div>
               );
