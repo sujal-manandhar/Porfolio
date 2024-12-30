@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-
 import {
   FaHtml5,
   FaCss3,
@@ -75,6 +74,7 @@ export const aboutData = [
       {
         stage: "Click here to Download",
         icons: [<FaDownload key="download" />],
+        link: "https://drive.google.com/drive/folders/1y39T-j12uV6AzqPmWfCm5xYDNas27FaZ",
       },
     ],
   },
@@ -111,16 +111,14 @@ const AnimatedNumbers = ({ value }) => {
 const About = () => {
   const [index, setIndex] = useState(0);
 
-  console.log(index);
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
-      {/* particles */}
-
+    <div className="h-full relative bg-primary/30 py-32 text-center xl:text-left">
       <Head>
         <title>About Us</title>
         <meta name="description" content="Know about us" />
       </Head>
       <Circles />
+
       <motion.div
         variants={fadeIn("right", 0.2)}
         initial="hidden"
@@ -131,13 +129,13 @@ const About = () => {
         <Avatar2 />
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div className="flex-1 flex flex-col justify-center">
+        <div className="text-center flex flex-col justify-center  xl:text-left  mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2"
+            className="h2 text-3xl sm:text-4xl sm:mt-7 xl:text-5xl mb-4"
           >
             Simplifying <span className="text-accent">Complexity</span>{" "}
             Maximizing Efficiency
@@ -147,11 +145,11 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-12 xl:mb-6 px-2 xl:px-0"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-12 xl:mb-6 px-2 xl:px-0 text-lg sm:text-xl"
           >
             To be the leading provider of innovative and reliable IT solutions
             in Nepal, driving digital transformation and empowering businesses
-            to thrive in the digital era
+            to thrive in the digital era.
           </motion.p>
           {/* counters */}
           <motion.div
@@ -196,9 +194,9 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+          className="flex flex-col w-full  xl:max-w-[48%] h-[480px]  px-4"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4 font-normal">
+          <div className="flex gap-x-4 xl:gap-x-8 mx-auto  xl:mx-0 mb-4 font-normal">
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
