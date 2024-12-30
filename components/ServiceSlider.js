@@ -25,23 +25,25 @@ const serviceData = [
   {
     icon: <RxDesktop />,
     title: "Development",
-    description: "The development team will handle all the work.",
+    description:
+      "My team and I ensure that your product is built with the best practices.",
   },
   {
     icon: <RxCrop />,
     title: "Visualization ",
-    description: "We will do a Visualization for you project.",
+    description:
+      "I help you bring your ideas to life, making them impactful for your audience.",
   },
 
   {
     icon: <RxReader />,
     title: "Deployment",
-    description: "Devops work will be handle by our team",
+    description: "Devops work will be handle by our team.",
   },
   {
     icon: <RxRocket />,
     title: "Testing",
-    description: "All the testing will be done and extra services",
+    description: "All the testing will be done and extra services.",
   },
 ];
 

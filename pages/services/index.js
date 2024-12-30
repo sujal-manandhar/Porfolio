@@ -59,10 +59,13 @@ const Services = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0"
+              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-justify font-normal"
             >
-              My mission is to deliver cutting-edge IT solutions and services
-              that enable organizations in Nepal to unlock their full potential.
+              I specialize in offering innovative IT services that drive digital
+              transformation. Whether you're a startup looking for your first
+              website or a large enterprise needing custom software solutions, I
+              provide tailored solutions designed to meet your unique business
+              needs.
             </motion.p>
           </div>
           <motion.div

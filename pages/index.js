@@ -25,10 +25,10 @@ const Home = () => {
             exit="hidden"
             className="h1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-semibold mb-4"
           >
-            Hi, It's {""}
+            Hi, It&apos;s {""}
             <span className="text-accent">Sujal Manandhar</span>
             <div className="text-[30px] md:text-[35px] mt-4  text-white font-bold justify-start">
-              I'm a
+              I&apos;m a
               <ReactTyped
                 className="pl-2 text-accent"
                 strings={[

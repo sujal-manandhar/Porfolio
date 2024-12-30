@@ -145,11 +145,15 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-12 xl:mb-6 px-2 xl:px-0 text-lg sm:text-xl"
+            className="text-justify max-w-[500px] mx-auto xl:mx-0 mb-12 xl:mb-6 px-2 xl:px-0 text-lg sm:text-xl font-normal"
           >
-            To be the leading provider of innovative and reliable IT solutions
-            in Nepal, driving digital transformation and empowering businesses
-            to thrive in the digital era.
+            As a passionate IT professional, I aim to transform complex
+            challenges into simple, efficient solutions. My mission is to be at
+            the forefront of digital innovation, providing reliable IT solutions
+            that empower businesses to navigate and succeed in the ever-evolving
+            digital era. I am dedicated to driving digital transformation for
+            businesses, fostering growth, and helping them adapt to the
+            fast-paced technological advancements of today.
           </motion.p>
           {/* counters */}
           <motion.div
