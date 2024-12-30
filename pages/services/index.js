@@ -1,36 +1,28 @@
-import {
-  RxCrop,
-  RxPencil2,
-  RxDesktop,
-  RxReader,
-  RxRocket,
-} from "react-icons/rx";
+import { RxCrop, RxPencil2, RxDesktop } from "react-icons/rx";
 
 export const serviceData = [
   {
     icon: <RxCrop />,
     title: "Branding",
-    description: "Lorem ispum dolor sit amet, consectetur adipisting elit",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     icon: <RxPencil2 />,
-    title: "Branding",
-    description: "Lorem ispum dolor sit amet, consectetur adipisting elit",
+    title: "Graphic Design",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     icon: <RxDesktop />,
-    title: "Branding",
-    description: "Lorem ispum dolor sit amet, consectetur adipisting elit",
+    title: "Web Development",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
 
-//components
+// Components
 import ServiceSlider from "../../components/ServiceSlider";
 import Bulb from "../../components/Bulb";
-import Circles from "../../components/Circles";
 
-//framer motion
-
+// Framer Motion
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 import Head from "next/head";
@@ -40,7 +32,10 @@ const Services = () => {
     <div className="h-full bg-primary/30 py-36 flex items-center">
       <Head>
         <title>Services</title>
-        <meta name="description" content="Know about us" />
+        <meta
+          name="description"
+          content="Discover the IT services we offer, including branding, graphic design, and web development."
+        />
       </Head>
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
@@ -52,7 +47,7 @@ const Services = () => {
               exit="hidden"
               className="h2 xl:mt-8"
             >
-              Services <span className="text-accent"></span>
+              Services
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
@@ -62,10 +57,10 @@ const Services = () => {
               className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-justify font-normal"
             >
               I specialize in offering innovative IT services that drive digital
-              transformation. Whether you're a startup looking for your first
-              website or a large enterprise needing custom software solutions, I
-              provide tailored solutions designed to meet your unique business
-              needs.
+              transformation. Whether you&apos;re a startup looking for your
+              first website or a large enterprise needing custom software
+              solutions, I provide tailored solutions designed to meet your
+              unique business needs.
             </motion.p>
           </div>
           <motion.div
@@ -77,7 +72,6 @@ const Services = () => {
           >
             <ServiceSlider />
           </motion.div>
-          {/* Slider */}
         </div>
       </div>
       <Bulb />
