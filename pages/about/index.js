@@ -22,6 +22,8 @@ import {
 
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import { fadeIn } from "../../variants";
+import Head from "next/head";
+import ParticlesContainer from "../../components/ParticlesContainer";
 
 export const aboutData = [
   {
@@ -57,33 +59,20 @@ export const aboutData = [
   {
     title: "Experience",
     info: [
-      {
-        stage: "Frontend Developer -Trion Tech Solution",
-      },
-      {
-        stage: "UI/UX Designer -Truenary Solution",
-      },
-      {
-        stage: "Software Developer - Kutumba Tech",
-      },
+      { stage: "Frontend Developer - Trion Tech Solution" },
+      { stage: "UI/UX Designer - Truenary Solution" },
+      { stage: "Software Developer - Kutumba Tech" },
     ],
   },
   {
     title: "Certificate",
     info: [
       {
-        stage: "Click here to Download", // Text for download link
-        // icons: [<FaDownload key="download" />], // Download icon
-        link: "https://drive.google.com/drive/folders/1y39T-j12uV6AzqPmWfCm5xYDNas27FaZ", // Google Drive link
+        link: "https://drive.google.com/drive/folders/1y39T-j12uV6AzqPmWfCm5xYDNas27FaZ",
       },
     ],
   },
 ];
-
-import Head from "next/head";
-import Avatar2 from "../../components/Avatar2";
-import ParticlesContainer from "../../components/ParticlesContainer";
-import Circles from "../../components/Circles";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -112,30 +101,20 @@ const About = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="h-full relative bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-full relative  bg-primary/30 py-32 text-center xl:text-left overflow-auto ">
       <Head>
         <title>About Us</title>
         <meta name="description" content="Know about us" />
       </Head>
-      <Circles />
 
-      <motion.div
-        variants={fadeIn("right", 0.2)}
-        initial="hidden"
-        animate="show"
-        exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[450px]"
-      >
-        <Avatar2 />
-      </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div className="text-center flex flex-col justify-center xl:text-left mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto h-full flex flex-col sm:pt-10 pt-5  xl:flex-row gap-x-6 xl:gap-x-12 ">
+        <div className="text-center flex flex-col justify-center xl:text-left mx-auto px-4 sm:px-6 lg:px-8 xl:w-1/2">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-3xl sm:text-4xl sm:mt-7 xl:text-5xl mb-4"
+            className="text-2xl sm:text-3xl xl:text-5xl mb-4 text-white"
           >
             Simplifying <span className="text-accent">Complexity</span>{" "}
             Maximizing Efficiency
@@ -145,23 +124,21 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-justify max-w-[500px] mx-auto xl:mx-0 mb-12 xl:mb-6 px-2 xl:px-0 text-lg sm:text-xl font-normal"
+            className="text-justify max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-6 px-2 xl:px-0 text-lg sm:text-xl font-normal text-white"
           >
-            As a passionate IT professional, I aim to transform complex
-            challenges into simple, efficient solutions. My mission is to be at
-            the forefront of digital innovation, providing reliable IT solutions
+            As a passionate IT professional, my mission is to be at the
+            forefront of digital innovation, providing reliable IT solutions
             that empower businesses to navigate and succeed in the ever-evolving
-            digital era. I am dedicated to driving digital transformation for
-            businesses, fostering growth, and helping them adapt to the
-            fast-paced technological advancements of today.
+            digital era.
           </motion.p>
+
           {/* counters */}
           <motion.div
             variants={fadeIn("right", 0.6)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+            className="md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
           >
             <div className="flex flex-1 xl:gap-x-6">
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
@@ -191,16 +168,17 @@ const About = () => {
             </div>
           </motion.div>
         </div>
-        {/* info */}
         <ParticlesContainer />
+
+        {/* Info Section */}
         <motion.div
           variants={fadeIn("left", 0.4)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px] px-4"
+          className="flex flex-col w-full xl:max-w-[48%] h-auto px-4"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4 font-normal">
+          <div className="flex justify-center xl:justify-start gap-x-4  xl:gap-x-8 mx-auto xl:mx-0 mb-4 font-normal">
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -209,7 +187,7 @@ const About = () => {
                     index === itemIndex &&
                     "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
                   }
-                  cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0 z-10`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
@@ -217,42 +195,39 @@ const About = () => {
               );
             })}
           </div>
-          <div className="py-2 xl:py-6 flex xl:text-lg flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+
+          <div className="py-2  flex xl:text-lg flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 xl:text-lg flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                  className="flex-1 xl:text-lg flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white z-30"
                 >
-                  <div className="font-light xl:text-lg">{item.title}</div>
-                  <div className="hidden md:flex">-</div>
-                  <div className="xl:text-lg text-white font-normal mt-4 md:mt-0 ">
-                    {item.stage}
-                  </div>
-                  <div className="flex gap-x-4 mt-2 md:mt-0">
-                    {item.icons &&
-                      item.icons.map((icon, iconIndex) => {
-                        return (
-                          <div
-                            key={iconIndex}
-                            className={`text-2xl ml-2 text-white hover:text-red-700 cursor-pointer`}
-                          >
-                            {icon}
-                          </div>
-                        );
-                      })}
-                    {/* Ensure the download section is only rendered once */}
-                    {item.link && (
-                      <a
-                        href={item.link}
-                        target="https://drive.google.com/drive/folders/1y39T-j12uV6AzqPmWfCm5xYDNas27FaZ" // Ensure the link opens in a new tab
-                        rel="noopener noreferrer"
-                        className="text-white text-lg flex items-center gap-2 mt-4 md:mt-0 hover:text-accent"
-                      >
-                        <FaDownload className=" cursor-pointer text-2xl" />
-                      </a>
-                    )}
-                  </div>
+                  <div className=" xl:text-lg">{item.stage}</div>
+
+                  {item.icons && (
+                    <div className="flex gap-x-4 mt-2 md:mt-0">
+                      {item.icons.map((icon, iconIndex) => (
+                        <div
+                          key={iconIndex}
+                          className="text-2xl ml-2 text-white hover:text-red-700 cursor-pointer transition-colors duration-700 "
+                        >
+                          {icon}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {item.link && (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white text-lg flex text-center gap-4  md:mt-0 hover:text-accent"
+                    >
+                      Download
+                      <FaDownload className="text-2xl" />
+                    </a>
+                  )}
                 </div>
               );
             })}

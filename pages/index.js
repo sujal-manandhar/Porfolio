@@ -12,18 +12,18 @@ import { ReactTyped } from "react-typed";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 relative h-full">
+    <div className="bg-primary/6 relative h-full">
       <Head>
         <title>Sujal Manandhar</title>
       </Head>
-      <div className="w-full h-full mt-4 bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto px-4 sm:px-6 md:px-8">
+      <div className="w-full h-full  bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+        <div className="text-center  flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto px-4 sm:px-6 md:px-8">
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-semibold mb-4"
+            className="h1 text-3xl mt-20  lg:mt-0 sm:text-4xl md:text-5xl xl:text-6xl font-semibold mb-4"
           >
             Hi, It&apos;s {""}
             <span className="text-accent">Sujal Manandhar</span>
@@ -50,7 +50,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="font-medium text-lg sm:text-xl md:text-2xl max-w-sw xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="font-medium text-justify text-lg sm:text-xl md:text-2xl max-w-sw xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
             I am an experienced and diligent IT worker. I am skilled in
             providing efficient and effective solutions. I thrive in team
@@ -80,7 +80,7 @@ const Home = () => {
             <Link href="mailto:sujalmanandhar11@gmail.com" target="_blank">
               <button className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
                 <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                  Contact Us
+                  Contact Me
                 </span>
                 <BsArrowRight
                   className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 
@@ -106,7 +106,7 @@ const Home = () => {
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
           className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 
-          lg:bottom-0 lg:right-[8%] xl:right-[10%] mx-auto"
+          lg:bottom-0 lg:right-[5%] xl:right-[5%] mx-auto"
         >
           <Avatar />
         </motion.div>

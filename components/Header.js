@@ -5,7 +5,7 @@ import Socials from "../components/Socials";
 
 const Header = () => {
   return (
-    <header className="absolute z-30 w-full  flex items-center px-4 sm:px-8 xl:px-0 xl:h-[90px]">
+    <header className=" z-10 w-full  flex items-center px-4 sm:px-8 xl:px-0 xl:h-[90px] fixed left-0 top-0 ">
       <div className="container mx-auto ">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-12 sm:py-12">
           <Link href={"/"}>
@@ -15,7 +15,7 @@ const Header = () => {
             </p>
           </Link>
           {/* socials */}
-          <div className="lg:flex space-x-6 ">
+          <div className="lg:flex  space-x-6 ">
             <Socials />
           </div>
         </div>

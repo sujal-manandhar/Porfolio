@@ -29,17 +29,25 @@ import Head from "next/head";
 
 const Services = () => {
   return (
-    <div className="h-full bg-primary/30 py-36 flex items-center">
+    <section className="h-full bg-primary/30 py-36 flex items-center xl:items-baseline">
       <Head>
         <title>Services</title>
         <meta
           name="description"
           content="Discover the IT services we offer, including branding, graphic design, and web development."
         />
+        {/* Additional SEO Meta Tags */}
+        <meta property="og:title" content="Our Services" />
+        <meta
+          property="og:description"
+          content="Discover the IT services we offer, including branding, graphic design, and web development."
+        />
+        <meta property="og:image" content="your-image-url.jpg" />
+        <meta property="og:url" content="your-page-url.com" />
       </Head>
-      <div className="container mx-auto">
+      <div className="container  mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
-          <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
+          <div className="text-center md:items-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
             <motion.h2
               variants={fadeIn("up", 0.2)}
               initial="hidden"
@@ -75,7 +83,7 @@ const Services = () => {
         </div>
       </div>
       <Bulb />
-    </div>
+    </section>
   );
 };
 
