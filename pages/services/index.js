@@ -45,8 +45,8 @@ const Services = () => {
         <meta property="og:image" content="your-image-url.jpg" />
         <meta property="og:url" content="your-page-url.com" />
       </Head>
-      <div className="container  mx-auto">
-        <div className="flex flex-col xl:flex-row gap-x-8">
+      <div className="container my-auto mx-auto">
+        <div className="flex flex-col xl:flex-row  gap-x-8">
           <div className="text-center md:items-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
             <motion.h2
               variants={fadeIn("up", 0.2)}

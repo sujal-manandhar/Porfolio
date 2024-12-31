@@ -64,7 +64,7 @@ const Contact = () => {
         <title>Contact Us</title>
         <meta name="description" content="Know about us" />
       </Head>
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+      <div className="container mx-auto my-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
         {/* text and form */}
         <div className="flex flex-col w-full h-full mt-7 max-w-[700px]">
           <motion.h2
